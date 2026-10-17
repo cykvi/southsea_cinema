@@ -15,7 +15,20 @@ class MovieListing extends StatelessWidget {
         elevation: 0,
       ),
       drawer: const NavDrawer(),
-      body: const SizedBox.shrink(),
+      body: Container(
+        child: Column(
+          children: [
+            Text('Movie Listing'),
+            Text('This is the movie listing description.'),
+            ElevatedButton(
+              onPressed: () {
+                print('Add to order button pressed');
+              },
+              child: const Text('Add to Order'),
+            ),
+          ],
+        )
+      ),
     );
   }
 }
