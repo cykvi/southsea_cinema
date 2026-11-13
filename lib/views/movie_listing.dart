@@ -23,6 +23,7 @@ class _MovieListingState extends State<MovieListing> {
       ),
       drawer: const NavDrawer(),
       body: Container(
+        color: cinemaBrandDark,
           child: Column(
         children: [
           Text('Movie Listing'),
@@ -33,7 +34,6 @@ class _MovieListingState extends State<MovieListing> {
               if (value != null) {
                 setState(() {
                   _ticketQuantity = value;
-                  print('Tickets selected: $_ticketQuantity');
                 });
               }
             },
